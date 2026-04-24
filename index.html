@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dev | Minecraft Developer</title>
+<style>
+:root {
+    --bg: #0d0d0d;
+    --card: #141414;
+    --accent: #4f9cff;
+    --accent-soft: rgba(79,156,255,0.2);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #111 0%, #0d0d0d 60%);
+    color: #e0e0e0;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+h1, h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--accent);
+    margin-top: 6px;
+}
+
+.section {
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card {
+    background: linear-gradient(145deg, #141414, #101010);
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px var(--accent-soft);
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.stat {
+    background: #141414;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 10px;
+    padding: 15px 10px;
+    transition: 0.25s;
+}
+
+.stat:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(108,92,255,0.2);
+}
+
+.stat h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.stat span {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.header h1 {
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+
+.header p {
+    color: #aaa;
+    margin-top: 5px;
+}
+
+.tag {
+    display: inline-block;
+    background: #1f1f1f;
+    padding: 6px 14px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 13px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: all 0.25s ease;
+}
+
+.tag:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+.contact p {
+    margin: 6px 0;
+}
+
+/* subtle animated glow background */
+body::before {
+    content: "";
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--accent-soft), transparent 70%);
+    top: -200px;
+    left: -200px;
+    filter: blur(80px);
+    z-index: 0;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255,255,255,0.05), transparent 70%);
+    bottom: -200px;
+    right: -200px;
+    filter: blur(100px);
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="header section">
+    <h1>Dev</h1>
+    <p>Minecraft Network Developer</p>
+
+    <div class="stats">
+        <div class="stat">
+            <h3>16</h3>
+            <span>Edad</span>
+        </div>
+        <div class="stat">
+            <h3>Argentina</h3>
+            <span>País</span>
+        </div>
+        <div class="stat">
+            <h3>6+</h3>
+            <span>Años Exp</span>
+        </div>
+        <div class="stat">
+            <h3>EN / ES</h3>
+            <span>Idiomas</span>
+        </div>
+    </div>
+</div>
+
+<div class="section card">
+    <h2>Sobre mí</h2>
+    <p>Desarrollador especializado en creación de networks de Minecraft, configuración avanzada de servidores y optimización de sistemas tanto para proyectos pequeños como grandes. Con más de 6 años de experiencia trabajando en entornos reales.</p>
+</div>
+
+<div class="section card">
+    <h2>Habilidades</h2>
+    <ul>
+        <li>Configuración profesional de servidores Minecraft</li>
+        <li>Creación y gestión de networks (BungeeCord / Velocity)</li>
+        <li>Optimización de rendimiento (TPS, carga, latencia)</li>
+        <li>Sistemas AntiBots avanzados</li>
+        <li>Implementación y ajuste de AntiCheats</li>
+        <li>Resolución de problemas complejos</li>
+        <li>Hardening y seguridad básica en servidores</li>
+        <li>Integración de plugins y sistemas personalizados</li>
+    </ul>
+</div>
+
+<div class="section card">
+    <h2>Tecnologías</h2>
+    <div>
+        <span class="tag">Java</span>
+        <span class="tag">Go</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">Python</span>
+        <span class="tag">Databases</span>
+    </div>
+</div>
+
+<div class="section card">
+    <h2>Experiencia</h2>
+    <p>Más de 6 años trabajando en servidores de Minecraft.</p>
+    <ul>
+        <li>AjoloCraft</li>
+        <li>Krayson Network</li>
+        <li>Hinode Network</li>
+        <li>Nexous MC</li>
+        <li>GreenCraft</li>
+    </ul>
+</div>
+
+<div class="section card contact">
+    <h2>Contacto</h2>
+    <p>Discord: techtides / .develop_</p>
+    <p></p>
+    <p>Email: dev@ajolocraft.net</p>
+    <p>Email: Nickno21@proton.me</p>
+        <p>Detalle: techtides es mi cuenta personal y Dev la de trabajo, las dos estan bajo la propiedad de la misma persona en preferencia contactate a la de Dev pero si no en la personal tambien te leere, lo mismo pasa para el email!</p>
+</div>
+
+</div>
+
+<div class="container">
+
+<div class="section card">
+    <h2>Pruebas</h2>
+    <div class="testimonials">
+
+        <div class="t-card">
+            <img src="https://cdn.discordapp.com/attachments/1260385431544008787/1497015380785369249/image.png?ex=69ebfbb7&is=69eaaa37&hm=6195d71bda19d0539e72ef7a51f94f53b06100b95e466270db29ecd0a15822a4&">
+            <h3>Zona de PvP</h3>
+            <div class="t-tags">
+                <span class="t-tag">Network</span>
+                <span class="t-tag">PvP</span>
+                <span class="t-tag">Config</span>
+                <span class="t-tag">HiNode Network</span>
+            </div>
+            <p>En esta imagen se muestra como yo desarrolle una zona externa al spawn para PvP. Para lograr hacer esto use los plugins: WorldEdit, este mismo fue usado para lograr un espacio separado del spawn donde los jugadores puedan pelear. PvpManager, este plugin fue utilizado para hacer una bossbar que te pone que estas en lucha y el tiempo para salir y, para que al acercarte a la zona segura te aparezca una barrera roja invisible. FancyHolograms, fue utilizado para el holograma que se ve ahi.</p>
+        </div>
+
+        <div class="t-card">
+            <img src="https://cdn.discordapp.com/attachments/1260385431544008787/1497015381188149329/image.png?ex=69ebfbb8&is=69eaaa38&hm=7fc2149f67acd2ccbb68336f539892f598a32c5391370960fa48ecc96ada80a7&">
+            <h3>Portales</h3>
+            <div class="t-tags">
+                <span class="t-tag">Network</span>
+                <span class="t-tag">Config</span>
+                <span class="t-tag">Portales</span>
+                <span class="t-tag">Krayson Network</span>
+            </div>
+            <p>En esta seccion se uso el ConditionalEvents para hacer que cuando entres en los portales te telestranporte al mundo elegido.</p>
+        </div>
+
+        <div class="t-card">
+            <img src="https://cdn.discordapp.com/attachments/1260385431544008787/1497015381905248366/image.png?ex=69ebfbb8&is=69eaaa38&hm=ccfa30ab6a7ac3ea341c28d52ea4a2c05c8a3b8f9162e5f2a2d4d30c85470233&">
+            <h3>Cajas</h3>
+            <div class="t-tags">
+                <span class="t-tag">Network</span>
+                <span class="t-tag">Config</span>
+                <span class="t-tag">Crates</span>
+                <span class="t-tag">GreenCraft</span>
+            </div>
+            <p>En este lugar se uso el plugin CrazyCrates para hacer las crates.</p>
+        </div>
+
+        <div class="t-card">
+            <img src="https://cdn.discordapp.com/attachments/1260385431544008787/1497015380017938529/image.png?ex=69ebfbb7&is=69eaaa37&hm=2ec1f6816c9d26cca78a2ead8ed122cc389f4cbc8ee548d1e7e886eeed3d63ff&">
+            <h3>Npcs</h3>
+            <div class="t-tags">
+                <span class="t-tag">Network</span>
+                <span class="t-tag">Config</span>
+                <span class="t-tag">Npcs</span>
+                <span class="t-tag">Hinode Network</span>
+            </div>
+            <p>En esta imagen se puede apreciar los npcs totalmente configurados y hechos por mi, estos mismos fueron hechos con ZnpcsPlus.</p>
+        </div>
+
+        <div class="t-card">
+            <img src="https://cdn.discordapp.com/attachments/1260385431544008787/1497015381519237163/image.png?ex=69ebfbb8&is=69eaaa38&hm=9f425e026da964f5c84ceace2d531eb0ba160c02212fb556c26f78698a620461&">
+            <h3>Portales 2</h3>
+            <div class="t-tags">
+                <span class="t-tag">Network</span>
+                <span class="t-tag">Config</span>
+                <span class="t-tag">Portales</span>
+                <span class="t-tag">Npcs</span>
+                <span class="t-tag">NexousMc</span>
+            </div>
+            <p>En esta seccion se uso el plugin ZnpcsPlus para los npcs y el ConditionalEvents para hacer que cuando entres en los portales te telestranporte al mundo elegido.</p>
+        </div>
+
+        <div class="t-card">
+            <img src="https://cdn.discordapp.com/attachments/1260385431544008787/1497015025557180556/image.png?ex=69ebfb63&is=69eaa9e3&hm=b1836037133504d4812e37b1a6f8b4040f0bee17b5b2b5b0fdc9c087ce3053c2">
+            <h3>Tab 1</h3>
+            <div class="t-tags">
+                <span class="t-tag">Network</span>
+                <span class="t-tag">Config</span>
+                <span class="t-tag">Tab + Scoreboard</span>
+                <span class="t-tag">Hinode Network</span>
+            </div>
+            <p>En la imagen se puede ver como quedo la tab y la scoreboard, en estas mismas se uso el plugin Tab y Papi para placeholders esteticas y similares, por ultimo se uso la pagina BirdFlop para colores en degrade y similares.</p>
+        </div>
+
+        <div class="t-card">
+            <img src="https://cdn.discordapp.com/attachments/1260385431544008787/1497013773783797770/image.png?ex=69ebfa38&is=69eaa8b8&hm=612b7170a4e5636357634fe3d7ff4071985030714d0fbc4705af4356a6d02b55">
+            <h3>Tab 2</h3>
+            <div class="t-tags">
+                <span class="t-tag">Network</span>
+                <span class="t-tag">Config</span>
+                <span class="t-tag">Tab + Scoreboard</span>
+                <span class="t-tag">AjoloCraft</span>
+            </div>
+            <p>Como en el caso anterior se puede apreciar la utilizacion del plugin Tab como para lograr la scoreboard y el tab, tambien utilice la pagina BirdFlop para colores en degrade.</p>
+        </div>
+
+    </div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<style>
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.t-card {
+    background: linear-gradient(145deg, #141414, #101010);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: all 0.25s ease;
+}
+
+.t-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.t-card h3 {
+    padding: 10px 15px 0;
+    font-size: 16px;
+}
+
+.t-card p {
+    padding: 0 10px 10px;
+    color: #aaa;
+}
+
+.t-tags {
+    padding: 0 10px 10px;
+}
+
+.t-tag {
+    display: inline-block;
+    font-size: 11px;
+    background: rgba(108,92,255,0.15);
+    color: #bbb;
+    padding: 4px 8px;
+    border-radius: 10px;
+    margin: 2px;
+    border: 1px solid rgba(108,92,255,0.3);
+}
+
+.t-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(79,156,255,0.2);
+}
+</style>
+
+<script>
+const sections = document.querySelectorAll('.section');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+});
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+</script>
+
+</body>
+</html>
